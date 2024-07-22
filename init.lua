@@ -41,6 +41,12 @@ vim.o.termguicolors = true
 --vim.api.nvim_set_keymap('n', 'gj', 'j', { noremap = true })
 --vim.api.nvim_set_keymap('n', 'gk', 'k', { noremap = true })
 
+-- import neovide settings
+require('config/neovide')
+
+-- import rls settings
+require('config/rls')
+
 -- check install & update Lazy.nvim
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -72,10 +78,4 @@ require('lazy').setup({
     { import = 'config' },
   }
 })
-
--- import neovide settings
---require('config/neovide')
-
--- import rls settings
---require('config/rls')
 
