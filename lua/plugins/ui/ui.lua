@@ -1,6 +1,9 @@
 return {
   -- UI extension
-  {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'},
+  {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	},
   {
     'nvim-neo-tree/neo-tree.nvim',
     branch = "v3.x",
@@ -76,4 +79,8 @@ return {
       require("registers").setup()
     end,
   },
+	{
+		'echasnovski/mini.animate',
+		version = '*',
+	},
 }
