@@ -19,27 +19,19 @@ vim.o.matchtime = 1
 vim.o.termguicolors = true
 
 -- search
--- vim.o.incsearch = true
--- vim.o.ignorecase = true
--- vim.o.smartcase = true
--- vim.o.hlsearch = true
--- vim.api.nvim_set_keymap('n', '<Esc><Esc>', ':nohl<CR>', { noremap = true, silent = true})
+vim.o.incsearch = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.hlsearch = true
 
 -- manipulation
--- vim.g.mapleader = ' '
--- vim.opt.clipboard:append{'unnamedplus'}
--- vim.o.ttimeout = true
--- vim.o.ttimeoutlen = 50
+vim.g.mapleader = ' '
+vim.opt.clipboard:append{'unnamedplus'}
+vim.o.ttimeout = true
+vim.o.ttimeoutlen = 50
 
--- vim.o.undofile = true
--- vim.o.undodir = vim.fn.stdpath('cache') .. '/undo'
-
--- vim.api.nvim_set_keymap('n', 'j', 'gj', { noremap = true })
--- vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true })
--- vim.api.nvim_set_keymap('n', '<Down>', 'gj', { noremap = true })
--- vim.api.nvim_set_keymap('n', '<Up>', 'gk', { noremap = true })
--- vim.api.nvim_set_keymap('n', 'gj', 'j', { noremap = true })
--- vim.api.nvim_set_keymap('n', 'gk', 'k', { noremap = true })
+vim.o.undofile = true
+vim.o.undodir = vim.fn.stdpath('cache') .. '/undo'
 
 -- check install & update Lazy.nvim
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
@@ -73,9 +65,3 @@ require('lazy').setup({
         import = 'config'
     }}
 })
-
--- import neovide settings
--- require('config/neovide')
-
--- import rls settings
--- require('config/rls')
